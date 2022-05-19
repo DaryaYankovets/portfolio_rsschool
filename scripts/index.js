@@ -1,4 +1,4 @@
-import i18Obj from './translate.js';
+import i18Obj from '../translate.js';
 
 window.addEventListener('DOMContentLoaded', function() {
   let theme = 'dark';
@@ -21,11 +21,18 @@ window.addEventListener('DOMContentLoaded', function() {
   hamburger.addEventListener('click', toggleMenu);
 
   
+  const navLink =document.querySelectorAll('.nav-link');
+  navLink.forEach(link => link.addEventListener('click', toggleMenu));
+
+
   function preloadImages(timeOfYear) {
     const portfolioImages = document.querySelectorAll('.portfolio-image');
     portfolioImages.forEach((img, index) => img.src = `./assets/img/portfolio/${timeOfYear}/${index + 1}.jpg`);
   }
   preloadImages('autumn');
+
+
+
 
 
   const portfolioBtns = document.querySelector('.portfolio-btns');
@@ -40,6 +47,8 @@ window.addEventListener('DOMContentLoaded', function() {
     event.target.classList.add('active-btn');
     preloadImages(event.target.dataset.season);
   }); 
+
+
 
 
   document.querySelector('.lang').addEventListener('click', (event) => {
@@ -93,6 +102,8 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+
+
   document.querySelector('.theme').addEventListener('click', (event) => {
     document.querySelectorAll('.theme-img').forEach(elem => elem.classList.toggle('inactive-theme'));
 
@@ -114,19 +125,10 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  const animateButton = (e) => {
-    e.preventDefault;
-    e.target.classList.remove('animate');
-    
-    e.target.classList.add('animate');
-    setTimeout(function(){
-      e.target.classList.remove('animate');
-    },700);
-  };
+
   
-  const bubblyButtons = document.querySelectorAll(".btn");
+  const btns = document.querySelectorAll(".btn");
+  btns.forEach(btn => btn.addEventListener('click', () => location.href='#contacts'));
   
-  for (let i = 0; i < bubblyButtons.length; i++) {
-    bubblyButtons[i].addEventListener('click', animateButton, false);
-  }
+
 });

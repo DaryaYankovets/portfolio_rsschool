@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/ico/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="style.css"> 
     <title>Portfolio</title>
 </head>
@@ -39,11 +40,11 @@
         </div>
         <nav class="nav-adaptive">
             <ul class="nav-list-adaptive">
-                <li><a href="#skills" data-i18="skills">Skills</a></li>
-                <li><a href="#portfolio" data-i18="portfolio">Portfolio</a></li>
-                <li><a href="#video" data-i18="video">Video</a></li>
-                <li><a href="#price" data-i18="price">Price</a></li>
-                <li><a href="#contacts" data-i18="contacts">Contacts</a></li>
+                <li><a href="#skills" class="nav-link" data-i18="skills">Skills</a></li>
+                <li><a href="#portfolio" class="nav-link" data-i18="portfolio">Portfolio</a></li>
+                <li><a href="#video" class="nav-link" data-i18="video">Video</a></li>
+                <li><a href="#price" class="nav-link" data-i18="price">Price</a></li>
+                <li><a href="#contacts" class="nav-link" data-i18="contacts">Contacts</a></li>
               </ul>
         </nav>
         <div class="blackout-box"></div>
@@ -56,7 +57,8 @@
                 <p class="hero-subtitle" data-i18="hero-text">Save sincere emotions, romantic feelings and happy moments of life together with professional photographer Alexa Rise</p>
                 <button class="btn" data-i18="hire">Hire me</button>  
             </section>
-            <section id="skills" class="skills-container section-padding">
+
+            <section id="skills" class="skills-container section-padding element-animation">
                 <h2 class="section-title" data-i18="skills">Skills</h2>
                 <div class="skills-items">
                     <div class="skill-item">
@@ -105,6 +107,7 @@
                     </div>
                 </div>
             </section>
+            
             <section id="portfolio" class="portfolio-container">
                 <h2 class="section-title" data-i18="portfolio">Portfolio</h2>
                <div class="portfolio-btns">
@@ -114,24 +117,29 @@
                     <button class="portfolio-btn active-btn" data-season="autumn" data-i18="autumn">Autumn</button>
                 </div>
                 <div class="portfolio-items">
-                    <img class="portfolio-image"  alt="photo-portfolio">
-                    <img class="portfolio-image"  alt="photo-portfolio">
-                    <img class="portfolio-image"  alt="photo-portfolio">
-                    <img class="portfolio-image"  alt="photo-portfolio">
-                    <img class="portfolio-image"  alt="photo-portfolio">
-                    <img class="portfolio-image"  alt="photo-portfolio">
+                    <img class="portfolio-image element-animation"  alt="photo-portfolio">
+                    <img class="portfolio-image element-animation"  alt="photo-portfolio">
+                    <img class="portfolio-image element-animation"  alt="photo-portfolio">
+                    <img class="portfolio-image element-animation"  alt="photo-portfolio">
+                    <img class="portfolio-image element-animation"  alt="photo-portfolio">
+                    <img class="portfolio-image element-animation"  alt="photo-portfolio">
                 </div>  
             </section>
+
             <section id="video" class="video-container">
                 <h2 class="section-title" data-i18="video">Video</h2>
-                 <div class="video-player">
-                    
-                </div>
+                <video 
+                    class="video-player"  
+                    controls="" 
+                    poster="./assets/img/video-player.jpg">
+                    <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4' /> 
+                </video>
             </section>
+
             <section id="price" class="price-container">
                 <h2 class="section-title" data-i18="price">Price</h2>
                  <div class="price-items">
-                    <div class="price-item">
+                    <div class="price-item element-animation">
                         <h3 class="price-item-title">Standard</h3>
                         <div class="price">500 $</div>
                         <div class="price-item-texts">
@@ -145,7 +153,7 @@
                             <button class="btn" data-i18="order">Order shooting</button>
                         </div>        
                     </div>
-                    <div class="price-item">
+                    <div class="price-item element-animation">
                         <h3 class="price-item-title">Premium</h3>
                         <div class="price">700 $</div>
                         <div class="price-item-texts">
@@ -159,7 +167,7 @@
                             <button class="btn" data-i18="order">Order shooting</button>
                         </div> 
                     </div>
-                    <div class="price-item">
+                    <div class="price-item element-animation">
                         <h3 class="price-item-title">Gold</h3>
                         <div class="price">1000 $</div>
                         <div class="price-item-texts">
@@ -175,13 +183,14 @@
                     </div>
                 </div> 
             </section>
+
             <section id="contacts" class="contact-container">
                 <div class="contact-box">
                     <h2 class="contact-title" data-i18="contact-me">Contact me</h2>
-                    <input class="contact-input" type="email" placeholder="E-mail" data-i18="email">
-                    <input class="contact-input" type="tel" placeholder="Phone" data-i18="phone">
-                    <textarea class="contact-textarea" name="message" id="contact-message" placeholder="Message" data-i18="message"></textarea>
-                    <button class="btn" data-i18="send-message">Send message</button> 
+                    <input class="contact-input element-animation" type="email" placeholder="E-mail" data-i18="email">
+                    <input class="contact-input element-animation" type="tel" placeholder="Phone" data-i18="phone">
+                    <textarea class="contact-textarea element-animation" name="message" id="contact-message" placeholder="Message" data-i18="message"></textarea>
+                    <button class="contacts-btn" type="submit" data-i18="send-message element-animation">Send message</button> 
                 </div>
             </section>
         </div>
@@ -207,6 +216,7 @@
     </footer>
     </div>  
 
-    <script type="module" src="./index.js"></script>  
+    <script type="module" src="./scripts/index.js"></script>  
+    <script src="./scripts/animation.js"></script>
 </body>
 </html>
