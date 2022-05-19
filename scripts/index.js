@@ -131,4 +131,20 @@ window.addEventListener('DOMContentLoaded', function() {
   btns.forEach(btn => btn.addEventListener('click', () => location.href='#contacts'));
   
 
+
+  const btnContacts = document.querySelector(".contacts-btn");
+
+  btnContacts.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    if (!document.querySelector('.message')) {
+      const contactsBox = document.querySelector(".contact-box");
+      const message = document.createElement('div');
+      message.textContent = 'Ваша запрос отправлен! Спасибо!';
+      message.className = 'message';
+      contactsBox.append(message);
+    }
+  })
+
+  
 });
