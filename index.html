@@ -188,10 +188,12 @@
                 <div class="contact-box">
                     <h2 class="contact-title" data-i18="contact-me">Contact me</h2>
                     <div class="element-animation">
-                        <input class="contact-input" type="email" placeholder="E-mail" data-i18="email">
-                        <input class="contact-input" type="tel" placeholder="Phone" data-i18="phone">
-                        <textarea class="contact-textarea" name="message" id="contact-message" placeholder="Message" data-i18="message"></textarea>
-                        <button class="contacts-btn" type="submit" data-i18="send-message">Send message</button> 
+                        <form action="">
+                            <input class="contact-input" type="email" placeholder="E-mail" data-i18="email" required>
+                            <input class="contact-input" type="tel" placeholder="Phone" data-i18="phone" required>
+                            <textarea class="contact-textarea" name="message" id="contact-message" placeholder="Message" data-i18="message"></textarea>
+                            <button class="contacts-btn" data-i18="send-message">Send message</button> 
+                        </form>
                     </div>
                 </div>
             </section>
